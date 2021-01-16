@@ -17,9 +17,22 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword () {
     var passwordLength = prompt("Enter a number between 8-128"); 
+    if (passwordLength < 8) {
+        alert("number is too small");
+        return;
+    }
+    if (passwordLength > 128) {
+        alert("number is too large");
+        return;
+    }
     var lowercaseChoice = confirm("Include lowercase letters?")
+
     var uppercaseChoice = confirm("Include uppercase letters?")
+
     var numbersChoice = confirm("Include numbers?")
+    
     var specialcharChoice = confirm("Include special characters?")
+    
+
 
 }
