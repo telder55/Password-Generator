@@ -17,7 +17,7 @@ function writePassword() {
 }
 
 // Function to prompt user to enter password requirements
-function getPasswordDetails() {
+function generatePassword() {
   var passwordSelection = []
   // User provides desired length between 8-128
   var passwordLength = prompt("Enter a length for your password between 8-128 characters.");
@@ -32,15 +32,19 @@ function getPasswordDetails() {
   var includeNumbers = confirm("Include numbers?");
 
   // Prompt if user would like to include special characters 
-  var includeSpecial = confirm("Include any special characters?");
+  var includeSpecial = confirm("Include any special characters?"); 
+
+  return "string"
 
 }
 
 
 
+
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-generateBtn.addEventListener("click", getPasswordDetails)
+
 
 
 
