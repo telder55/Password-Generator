@@ -48,7 +48,6 @@ function generatePassword () {
         passwordSelection = [...passwordSelection]
     }
 
-
     var numbersChoice = confirm("Include numbers?")
     if (numbersChoice === true) {
         passwordSelection = [...passwordSelection, ...numbers];
@@ -62,7 +61,6 @@ function generatePassword () {
     } else {
         passwordSelection = [...passwordSelection]
     }
-
 
     for (var i=0; i < passwordLength; i++) {
         password += passwordSelection[(Math.floor(Math.random() * passwordSelection.length))]
