@@ -5,7 +5,6 @@ var lowercase = "abcdefghijklmnopqrstuvwxyz".split("");
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 var specialchar = "`~!@#$%^&*()-_=+".split("");
 
-var passwordSelection = []
 
 // Write password to the #password input
 function writePassword() {
@@ -21,6 +20,7 @@ function writePassword() {
 function generatePassword () {
     var passwordLength = prompt("Enter a number between 8-128");   
     var password = "";
+    var passwordSelection = []
 
     if (passwordLength < 8) {
         alert("number is too small");
@@ -37,17 +37,14 @@ function generatePassword () {
     var lowercaseChoice = confirm("Include lowercase letters?")
     if (lowercaseChoice === true) {
         passwordSelection = [...passwordSelection, ...lowercase];
-    }
-
-    else {
+    } else {
         passwordSelection = [...passwordSelection]
     }
 
     var uppercaseChoice = confirm("Include uppercase letters?")
     if (uppercaseChoice === true) {
         passwordSelection = [...passwordSelection, ...uppercase];
-    }
-    else {
+    } else {
         passwordSelection = [...passwordSelection]
     }
 
@@ -55,26 +52,23 @@ function generatePassword () {
     var numbersChoice = confirm("Include numbers?")
     if (numbersChoice === true) {
         passwordSelection = [...passwordSelection, ...numbers];
-
-    }
-    else {
+    } else {
         passwordSelection = [...passwordSelection]
     }
 
     var specialcharChoice = confirm("Include special characters?")
     if (specialcharChoice === true) {
         passwordSelection = [...passwordSelection, ...specialchar];
-    }
-
-    else {
+    } else {
         passwordSelection = [...passwordSelection]
     }
 
 
     for (var i=0; i < passwordLength; i++) {
-        password = password + passwordSelection [(Math.floor(Math.random() * passwordSelection.length))]
+        password += passwordSelection[(Math.floor(Math.random() * passwordSelection.length))]
         
     }
+
     return password
 
 }
