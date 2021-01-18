@@ -7,6 +7,7 @@ https://telder55.github.io/Password-Generator/
 ## Screenshot
 ![Password Generator Screenshot](assets/Images/Password-Generator-screenshot.png?raw=true)
 ![Alt text](assets/Images/Password-Generator-screenshot.png?raw=true "About Me Page - Mobile")
+![Alt text](assets/Images/Password-Generator.jpeg?raw=true "About Me Page - Mobile")
 
 ## License
 Standard MIT License
