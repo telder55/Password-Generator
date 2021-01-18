@@ -5,9 +5,7 @@ This project involved adding to existing code to create a functional password ge
 https://telder55.github.io/Password-Generator/
 
 ## Screenshot
-![Alt text](assets/images/About-Me-desktop.png?raw=true "About Me Page - Desktop")
-
-![Alt text](assets/images/About-Me-Mobile.jpeg?raw=true "About Me Page - Mobile")
+![Alt text](assets/images/Password-Generator-screenshot.png?raw=true "Password Generator Screenshot")
 
 ## License
-No License
+Standard MIT License
