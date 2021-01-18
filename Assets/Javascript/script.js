@@ -37,6 +37,8 @@ function generatePassword () {
     var lowercaseChoice = confirm("Include lowercase letters?")
     if (lowercaseChoice === true) {
         passwordSelection = [...passwordSelection, ...lowercase];
+        password += lowercase[(Math.floor(Math.random() * lowercase.length))];
+
     } else {
         passwordSelection = [...passwordSelection]
     }
@@ -44,6 +46,8 @@ function generatePassword () {
     var uppercaseChoice = confirm("Include uppercase letters?")
     if (uppercaseChoice === true) {
         passwordSelection = [...passwordSelection, ...uppercase];
+        password += uppercase[(Math.floor(Math.random() * uppercase.length))];
+
     } else {
         passwordSelection = [...passwordSelection]
     }
@@ -51,6 +55,8 @@ function generatePassword () {
     var numbersChoice = confirm("Include numbers?")
     if (numbersChoice === true) {
         passwordSelection = [...passwordSelection, ...numbers];
+        password += numbers[(Math.floor(Math.random() * numbers.length))];
+
     } else {
         passwordSelection = [...passwordSelection]
     }
@@ -58,11 +64,15 @@ function generatePassword () {
     var specialcharChoice = confirm("Include special characters?")
     if (specialcharChoice === true) {
         passwordSelection = [...passwordSelection, ...specialchar];
+        password += specialchar[(Math.floor(Math.random() * specialchar.length))];
+
     } else {
         passwordSelection = [...passwordSelection]
     }
 
-    for (var i=0; i < passwordLength; i++) {
+    var masterLength = passwordLength - password.length;
+
+    for (var i=0; i < masterLength; i++) {
         password += passwordSelection[(Math.floor(Math.random() * passwordSelection.length))]
         
     }
