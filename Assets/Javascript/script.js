@@ -70,6 +70,12 @@ function generatePassword () {
         passwordSelection = [...passwordSelection]
     }
 
+    if (passwordSelection < 1) {
+        alert("Please select at least one character type");
+        return "Click Generate Password Button to Try Again";
+
+    }
+
     var masterLength = passwordLength - password.length;
 
     for (var i=0; i < masterLength; i++) {
